@@ -891,12 +891,12 @@ serverinfo {
  * Multiple may be defined but only one will be used at a time (IRC
  * being a tree shaped network).
  */
-uplink "<%= @hostname %>" {
+uplink "<%= @uplink_servername %>" {
 	// The server name of the ircd you're linking to goes above.
 
 	// host
 	// The hostname to connect to.
-	host = "<%= @host %>";
+	host = "<%= @uplink_host %>";
 
 	// vhost
 	// The source IP to connect from, used on machines with multiple interfaces.
@@ -904,19 +904,20 @@ uplink "<%= @hostname %>" {
 
 	// password
 	// The password used for linking.
-	password = "<%= @password %>";
+	password = "<%= @uplink_password %>";
 
 	// port
 	// The port to connect to.
-	port = <%= @port %>;
+	port = <%= @uplink_port %>;
 };
 
-/* this is an example for using an IPv6 address as an uplink */
+/* this is an example for using an IPv6 address as an uplink 
 uplink "irc6.example.net" {
 	host = "::1";
 	password = "linkage";
 	port = 6667;
 };
+*/
 
 /* Services configuration.
  *
