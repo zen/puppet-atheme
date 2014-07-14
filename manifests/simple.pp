@@ -16,7 +16,7 @@ class atheme::simple (
   $uplink_servername = undef,
   $uplink_host = undef,
   $uplink_port = undef,
-  $uplink_password = undef,  
+  $uplink_password = undef,
 ) {
 
   if ! $uplink_servername or ! $uplink_host or ! $uplink_port or ! $uplink_password {
